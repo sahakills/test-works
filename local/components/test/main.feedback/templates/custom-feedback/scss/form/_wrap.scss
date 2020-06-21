@@ -1,0 +1,43 @@
+.body-form {
+  width: 890px;
+  margin: 0 auto;
+  @include Small {
+    width: 100%;
+
+  }
+  .form-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    &-input {
+      display: flex;
+      flex: 0 0 auto;
+      flex-flow: row wrap;
+      order: 1;
+    }
+    &-checkbox{
+      display: flex;
+      flex: 1 1 100%;
+      align-items: center;
+      order: 3;
+      @include Small {
+        order: 2;
+      }
+    }
+    &-submit {
+      order: 2;
+      display: flex;
+      flex: 0 0 auto;
+      justify-content: center;
+      @include Small {
+        order: 3;
+      }
+    }
+    @include Small {
+      justify-content: center;
+      &-input, &-checkbox, &-submit {
+        flex: 1 1 100%;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.form-wrap {
+  input {
+    @include input-text;
+    border: 1px solid $color-main;
+  }
+  &-submit {
+    input[type='submit'] {
+      background-color: $color-main;
+      border: none;
+      transition: background-color 0.5s;
+      &:hover {
+        background-color: $color-hover;
+        color: #ffffff;
+      }
+      &:active {
+        background-color: $color-click;
+        color: #ffffff;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &-checkbox {
+    @include input-text;
+    padding: 0;
+    @include Small {
+      margin: 10px 0;
+      padding: 0;
+
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-left: 25px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 13px;
+      width: 13px;
+      background-color: #ffffff;
+      border: 1px solid $color-main;
+      transition: background-color 0.5s;
+
+    }
+
+    .container input:checked ~ .checkmark {
+      background-color: $color-main;
+    }
+
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+}
+

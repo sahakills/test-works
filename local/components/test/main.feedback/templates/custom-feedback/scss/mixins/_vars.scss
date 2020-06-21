@@ -1,0 +1,29 @@
+$color-main: #FFAD33;
+$color-hover: #006E60;
+$color-click: #00463D;
+@mixin input-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  width: 215px;
+  height: 35px;
+  margin: 0 15px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  @include Small {
+    flex-basis: 100%;
+    padding: 7px 10px;
+    margin: 0 15px 15px 15px;
+    width: 100%;
+    height: auto;
+    max-width: 274px;
+  }
+}
+
+
+

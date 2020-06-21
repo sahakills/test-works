@@ -1,0 +1,265 @@
+@font-face {
+  font-family: Roboto;
+  src: url("fonts/Roboto-Regular.ttf"); }
+
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  /* Browsers have different default form fonts */
+  font-size: 13px;
+  font-family: Arial; }
+
+/* Remove the stupid outer glow in Webkit */
+input:focus {
+  outline: 0; }
+
+/* Box Sizing Reset
+-----------------------------------------------*/
+/* All of our custom controls should be what we expect them to be */
+input,
+textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Text Inputs
+-----------------------------------------------*/
+/* Button Controls
+-----------------------------------------------*/
+input[type=checkbox],
+input[type=radio] {
+  width: 13px;
+  height: 13px; }
+
+/* File Uploads
+-----------------------------------------------*/
+/* Search Input
+-----------------------------------------------*/
+/* Make webkit render the search input like a normal text field */
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box; }
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none; }
+
+/* Buttons
+-----------------------------------------------*/
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+  /* Fix IE7 display bug */
+  overflow: visible;
+  width: auto; }
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button {
+  padding: 0;
+  border: 0;
+  background: none; }
+
+/* Textarea
+-----------------------------------------------*/
+textarea {
+  /* Move the label to the top */
+  vertical-align: top;
+  /* Turn off scroll bars in IE unless needed */
+  overflow: auto; }
+
+/* Selects
+-----------------------------------------------*/
+select[multiple] {
+  /* Move the label to the top */
+  vertical-align: top; }
+
+.body-form {
+  width: 890px;
+  margin: 0 auto; }
+
+@media only screen and (max-width: 480px) {
+  .body-form {
+    width: 100%; } }
+
+.body-form .form-wrap {
+  display: flex;
+  flex-flow: row wrap; }
+
+.body-form .form-wrap-input {
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row wrap;
+  order: 1; }
+
+.body-form .form-wrap-checkbox {
+  display: flex;
+  flex: 1 1 100%;
+  align-items: center;
+  order: 3; }
+
+@media only screen and (max-width: 480px) {
+  .body-form .form-wrap-checkbox {
+    order: 2; } }
+
+.body-form .form-wrap-submit {
+  order: 2;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center; }
+
+@media only screen and (max-width: 480px) {
+  .body-form .form-wrap-submit {
+    order: 3; } }
+
+@media only screen and (max-width: 480px) {
+  .body-form .form-wrap {
+    justify-content: center; }
+  .body-form .form-wrap-input, .body-form .form-wrap-checkbox, .body-form .form-wrap-submit {
+    flex: 1 1 100%;
+    justify-content: center; } }
+
+.form-wrap input {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  width: 215px;
+  height: 35px;
+  margin: 0 15px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #FFAD33; }
+
+@media only screen and (max-width: 480px) {
+  .form-wrap input {
+    flex-basis: 100%;
+    padding: 7px 10px;
+    margin: 0 15px 15px 15px;
+    width: 100%;
+    height: auto;
+    max-width: 274px; } }
+
+.form-wrap-submit input[type='submit'] {
+  background-color: #FFAD33;
+  border: none;
+  transition: background-color 0.5s; }
+
+.form-wrap-submit input[type='submit']:hover {
+  background-color: #006E60;
+  color: #ffffff; }
+
+.form-wrap-submit input[type='submit']:active {
+  background-color: #00463D;
+  color: #ffffff; }
+
+.form-wrap-submit input[type='submit']:focus {
+  outline: none; }
+
+.form-wrap-checkbox {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  width: 215px;
+  height: 35px;
+  margin: 0 15px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0; }
+
+@media only screen and (max-width: 480px) {
+  .form-wrap-checkbox {
+    flex-basis: 100%;
+    padding: 7px 10px;
+    margin: 0 15px 15px 15px;
+    width: 100%;
+    height: auto;
+    max-width: 274px; } }
+
+@media only screen and (max-width: 480px) {
+  .form-wrap-checkbox {
+    margin: 10px 0;
+    padding: 0; } }
+
+.form-wrap-checkbox .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 12px;
+  line-height: 14px; }
+
+.form-wrap-checkbox .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+.form-wrap-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  background-color: #ffffff;
+  border: 1px solid #FFAD33;
+  transition: background-color 0.5s; }
+
+.form-wrap-checkbox .container input:checked ~ .checkmark {
+  background-color: #FFAD33; }
+
+.form-wrap-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+.form-wrap-checkbox .container input:checked ~ .checkmark:after {
+  display: block; }
+
+.send {
+  display: flex;
+  order: 5;
+  flex: 1;
+  justify-content: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px; }
