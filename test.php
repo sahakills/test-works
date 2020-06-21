@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("test");
-?>Тексавыавыа..<?$APPLICATION->IncludeComponent(
+?><?$APPLICATION->IncludeComponent(
 	"test:main.feedback",
 	"custom-feedback",
 	Array(
